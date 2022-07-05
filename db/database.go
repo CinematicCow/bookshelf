@@ -21,7 +21,7 @@ type database struct {
 
 func init() {
 	if err := godotenv.Load(); err != nil {
-		log.Println("Warning: env file load error", err)
+		log.Println("Warning : env file load error", err)
 	}
 }
 
