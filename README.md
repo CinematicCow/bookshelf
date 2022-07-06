@@ -1,1 +1,7 @@
-TODO: Make a readme
+```sh
+docker-compose build
+```
+
+```sh
+docker-compose up -d
+```
