@@ -45,9 +45,9 @@ func main() {
 	// Books route handlers
 	r.GET("/books", handler.GetAllBooks)
 	r.GET("/books/:id", handler.GetOneBook)
-	r.POST("/books", handler.AddBook)
-	r.PATCH("/books/:id", handler.UpdateBook)
-	r.DELETE("/books/:id", handler.DeleteBook)
+	r.POST("/books", handler.VerifySession(nil), handler.AddBook)
+	r.PATCH("/books/:id", handler.VerifySession(nil), handler.UpdateBook)
+	r.DELETE("/books/:id", handler.VerifySession(nil), handler.DeleteBook)
 
 	db.ConnectDatabase()
 
